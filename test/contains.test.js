@@ -31,4 +31,13 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns false if the target value is not among the values of an array-like-object', () => {
+    const person = {
+      'length': 10,
+      'name': 'Mario',
+      'weight': '68kg',
+      'country': 'Italy'
+    };
+    expect(_.contains(person, 'Ruigi')).toBe(false);
+  });  
 });
