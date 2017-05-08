@@ -12,7 +12,14 @@ describe('isArrayLike()', () => {
     expect(_.isArrayLike(arrayLikeObj)).toBe(true);
   });
 
-  it('returns false for a non-array-like object', () => {
+  it('returns false for an non-array-like object with length of string', () => {
+    const arrayLikeObj = {
+      length: '10'
+    };
+    expect(_.isArrayLike(arrayLikeObj)).toBe(false);
+  });
+
+    it('returns false for a non-array-like object', () => {
     const nonArrayLikeObj = {
       'foo': 'bar'
     };
