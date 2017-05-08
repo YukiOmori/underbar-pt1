@@ -5,6 +5,10 @@ describe('first()', () => {
     expect(_.first(['a', 'b', 'c'])).toEqual('a');
   });
 
+    it('returns empty array if fiven a negative number whose definite number is more than the length of the array', () => {
+    expect(_.first(['a', 'b', 'c'], -4)).toEqual([]);
+  });
+
   it('returns the first 2 elements of an array', () => {
     expect(_.first(['a', 'b', 'c'], 2)).toEqual(['a', 'b']);
   });
