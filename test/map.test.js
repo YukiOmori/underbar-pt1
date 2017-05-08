@@ -7,7 +7,7 @@ describe('map()', () => {
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
 
-  it('maps every numbers in an array of numbers to their square', () => {
+  it('maps every dupulicated letters in an object of characters', () => {
     const obj = {
       1: 'a',
       2: 'b',
