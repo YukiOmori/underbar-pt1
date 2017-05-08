@@ -23,4 +23,11 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters an array to only strings containing \'w\'', () => {
+    const colors = ['red', 'blue', 'green', 'yellow', 'white', 'black'];
+
+    expect(_.filter(colors, color => color.indexOf('w') >= 0)).toEqual(['yellow', 'white']);
+  });
+  
 });
