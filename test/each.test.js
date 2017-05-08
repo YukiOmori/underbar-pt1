@@ -38,6 +38,18 @@ describe('each()', () => {
       count += 1;
     });
     expect(count).toBe(3);
+  });  
+
+  it('iterates every element of an array, passing that element, its corresponding index, and the entire array to the callback, and operation onto each element is done', () => {
+    const arr = ['a', 'b', 'c'];
+    let count = 0;
+    let suffix = '0';
+    _.each(arr, function(element, index, array) {
+      array[index] += suffix;
+      expect(element + suffix).toEqual(array[index]);
+      count += 1;
+    });
+    expect(count).toBe(3);
   });
 });
 
