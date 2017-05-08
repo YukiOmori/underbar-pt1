@@ -5,6 +5,10 @@ describe('identity()', () => {
     expect(_.identity(null)).toBe(null);
   });
 
+  it('returns string if given a string', () => {
+    expect(_.identity('abc')).toBe('abc');
+  });
+
   it('returns the number if given a number', () => {
     expect(_.identity(5)).toBe(5);
   });
