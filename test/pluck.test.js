@@ -11,4 +11,14 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+  it('returns an array of just names, given an object of people objects', () => {
+    const people = {
+      0: { name: 'Harriet', age: 12},
+      1: { name: 'Lazarus', age: 999},
+      2: { name: 'Bethany', age: 14}
+    };
+    const result = _.pluck(people, 'name');
+    expect(result).toEqual(['Harriet', 'Lazarus', 'Bethany']);
+  });
+
 });
